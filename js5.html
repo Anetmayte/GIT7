@@ -1,0 +1,11 @@
+function calcularTemperatura() {
+    let Ts = Number(document.getElementById('Ts').value);
+    let T0 = Number(document.getElementById('T0').value);
+    let k  = Number(document.getElementById('k').value);
+    let t  = Number(document.getElementById('t').value);
+
+    let formula = Ts + (T0 - Ts) * Math.exp(-k * t);
+    let T = Math.round(formula);
+
+    document.getElementById('resultado').innerText = "La temperatura final T es: " + T + "° F";
+}
